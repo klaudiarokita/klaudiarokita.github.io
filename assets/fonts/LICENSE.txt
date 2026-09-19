@@ -1,0 +1,4 @@
+Archivo and DM Mono are licensed under the SIL Open Font License 1.1.
+Archivo: https://fonts.google.com/specimen/Archivo
+DM Mono: https://fonts.google.com/specimen/DM+Mono
+Full licence text: https://openfontlicense.org

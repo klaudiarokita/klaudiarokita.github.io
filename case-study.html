@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Project capacity &amp; scope analysis · Klaudia Rokita</title>
+<meta name="description" content="A case exercise: why a client feels there is no progress while the team logs plenty of hours. Diagnosis, hypothesis, questions and a recommendation.">
+
+<link rel="alternate" hreflang="en" href="https://klaudiarokita.github.io/case-study.html">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Project capacity &amp; scope analysis">
+<meta property="og:description" content="A client feels stalled while the team logs 524 hours. A case exercise by Klaudia Rokita.">
+<meta property="og:url" content="https://klaudiarokita.github.io/case-study.html">
+<meta property="og:image" content="https://klaudiarokita.github.io/assets/img/og-case-study.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Case study exercise by Klaudia Rokita: project capacity and scope analysis.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dmmono-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css?v=37">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="spine" aria-hidden="true"><i></i></div>
+<nav class="toc" aria-label="Sections on this page">
+  <ol>
+    <li><a href="#situation"><span>The situation</span><b>01</b></a></li>
+    <li><a href="#flags"><span>Red flags</span><b>02</b></a></li>
+    <li><a href="#hypothesis"><span>Hypothesis</span><b>03</b></a></li>
+    <li><a href="#questions"><span>Questions</span><b>04</b></a></li>
+    <li><a href="#recommendation"><span>Recommendation</span><b>05</b></a></li>
+    <li><a href="#message"><span>The message</span><b>06</b></a></li>
+  </ol>
+</nav>
+
+<header class="site">
+  <div class="wrap">
+    <a class="sig" href="./">Klaudia Rokita</a>
+    <nav class="lang mono" aria-label="Language">
+      <a href="case-study.html" aria-current="page" lang="en">EN</a>
+      <a href="pl/#work" lang="pl" hreflang="pl" title="Ten case study jest tylko po angielsku. Polskie streszczenie jest na stronie głównej.">PL</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ---------- intro ---------- -->
+  <section class="hero cs-hero">
+    <div class="wrap">
+      <p class="cs-back"><a class="tlink" href="./#work">&larr; Back to the home page</a></p>
+      <p class="slab__tag mono">Project management · case study · exercise</p>
+      <h1 class="cs-title">Project capacity &amp; scope analysis</h1>
+      <p class="lead">Diagnosing why a client feels &ldquo;no progress&rdquo; while the team logs plenty of hours.</p>
+      <p class="cs-note">A case exercise built on a realistic project scenario, not a real client engagement. Team members are referred to by their roles.</p>
+
+      <div class="tldr">
+        <p class="mono">The short version</p>
+        <p>My hypothesis: it's not an underperforming team. The &ldquo;no progress&rdquo; feeling comes from a mid-sprint scope change hitting reduced capacity and probable spillover, while one-sided communication hid the trade-offs from the client. What I'd do tomorrow: <b>lightweight client checkpoints</b>, with each sprint plan shared up front, goals set together two sprints ahead and the client invited to Sprint Reviews.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- 01 the situation ---------- -->
+  <section class="act" id="situation" aria-labelledby="situation-h">
+    <div class="wrap">
+      <p class="act__label mono"><b>01</b> The situation</p>
+      <div>
+        <h2 class="kicker reveal" id="situation-h">Plenty of hours, yet the client feels stalled.</h2>
+        <p class="body-text reveal d1">A four-person team is one month into a six-month build, run as two sprints of two weeks each. The client flags missed deadlines. The team says it is &ldquo;working as planned&rdquo;. In the second sprint, the client changed the scope. Around 524 hours were logged that month.</p>
+
+        <figure class="chart reveal d2">
+          <figcaption class="chart__title">Hours logged in the month, by role</figcaption>
+          <ul class="chart__legend" aria-hidden="true">
+            <li><i class="sw sw--work"></i>Project work</li>
+            <li><i class="sw sw--leave"></i>Sick leave and planned vacation</li>
+          </ul>
+          <div class="bars" role="img" aria-label="Hours logged in the month: designer 106 hours, senior developer 152, mid developer 152 of which 64 were sick leave and planned vacation, junior developer 114.">
+            <div class="bars__row"><span class="bars__role">Designer</span><span class="bars__track"><i class="bars__seg bars__seg--work bars__seg--end" style="width:66.5%" title="Designer: 106.4 h logged"></i></span><b class="bars__val">106 h</b></div>
+            <div class="bars__row"><span class="bars__role">Senior dev</span><span class="bars__track"><i class="bars__seg bars__seg--work bars__seg--end" style="width:95%" title="Senior dev: 152 h logged"></i></span><b class="bars__val">152 h</b></div>
+            <div class="bars__row"><span class="bars__role">Mid dev</span><span class="bars__track"><i class="bars__seg bars__seg--work" style="width:55%" title="Mid dev: 88 h of project work"></i><i class="bars__seg bars__seg--leave bars__seg--end" style="width:calc(40% - 2px)" title="Mid dev: 64 h of sick leave and planned vacation"><span>64 h leave</span></i></span><b class="bars__val">152 h</b></div>
+            <div class="bars__row"><span class="bars__role">Junior dev</span><span class="bars__track"><i class="bars__seg bars__seg--work bars__seg--end" style="width:71.25%" title="Junior dev: 114 h logged"></i></span><b class="bars__val">114 h</b></div>
+            <div class="bars__row bars__row--axis" aria-hidden="true"><span></span><span class="bars__axis"><span style="left:0">0</span><span style="left:25%">40</span><span style="left:50%">80</span><span style="left:75%">120</span><span style="left:100%">160 h</span></span><span></span></div>
+          </div>
+          <details class="chart__table">
+            <summary>See the numbers as a table</summary>
+            <table>
+              <thead><tr><th scope="col">Role</th><th scope="col">Available per week</th><th scope="col">Logged in the month</th><th scope="col">Of which leave</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Designer</th><td>28 h</td><td>106.4 h</td><td>&ndash;</td></tr>
+                <tr><th scope="row">Senior dev</th><td>40 h</td><td>152 h</td><td>&ndash;</td></tr>
+                <tr><th scope="row">Mid dev</th><td>40 h</td><td>152 h</td><td>64 h</td></tr>
+                <tr><th scope="row">Junior dev</th><td>30 h</td><td>114 h</td><td>&ndash;</td></tr>
+                <tr><th scope="row">Team</th><td>138 h</td><td>524.4 h</td><td>64 h</td></tr>
+              </tbody>
+            </table>
+          </details>
+        </figure>
+
+        <div class="callout reveal">
+          <p class="mono">The dip isn't the story</p>
+          <p>A drop in week two is just a public holiday. The real issue is hidden in the totals: <span class="mark">64 of the mid developer's 152 logged hours were sick leave and planned vacation</span>, not project work, and nobody on the team absorbed the gap.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- 02 red flags ---------- -->
+  <section class="act" id="flags" aria-labelledby="flags-h">
+    <div class="wrap">
+      <p class="act__label mono"><b>02</b> What worried me</p>
+      <div>
+        <h2 class="kicker reveal" id="flags-h">Three red flags.</h2>
+        <ol class="flags">
+          <li class="reveal">
+            <h3>An unplanned absence nobody backfilled</h3>
+            <p>The mid developer's sick leave in sprint one wasn't absorbed by the team: nobody else's hours went up to cover it. That most likely pushed work into sprint two.</p>
+          </li>
+          <li class="reveal">
+            <h3>A scope change in the middle of a sprint</h3>
+            <p>New scope landed inside sprint two, which was already planned, with tasks assigned in advance and capacity reduced by a planned vacation. There was no room to deliver it that cycle.</p>
+          </li>
+          <li class="reveal">
+            <h3>A one-sided communication channel</h3>
+            <p>Every client meeting runs through a single developer. The designer, more than 100 hours in, has none. The client sees the project through one narrow, technical lens.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- 03 hypothesis ---------- -->
+  <section class="act" id="hypothesis" aria-labelledby="hyp-h">
+    <div class="wrap">
+      <p class="act__label mono"><b>03</b> My hypothesis</p>
+      <div>
+        <h2 class="kicker reveal" id="hyp-h">It's not an underperforming team.</h2>
+        <p class="body-text reveal d1">The &ldquo;no progress&rdquo; feeling comes from a mid-sprint scope change hitting reduced capacity and probable spillover, while one-sided communication hid the trade-offs from the client.</p>
+        <div class="proscons reveal d2">
+          <div>
+            <p class="mono proscons__label">What supports it</p>
+            <ul class="dash">
+              <li>The sick leave wasn't covered: nobody else's hours went up, so work likely spilled over.</li>
+              <li>Sprint two had reduced capacity because of a planned vacation.</li>
+              <li>The scope change came mid-sprint, with no room to absorb it.</li>
+              <li>All client communication flows through one person.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="mono proscons__label proscons__label--muted">What challenges it</p>
+            <ul class="dash dash--muted">
+              <li>There is no data on how the change was negotiated, so other explanations are possible.</li>
+              <li>Raising the alarm after one month of six may mean high expectations.</li>
+              <li>Hours are logged in broad categories, so real output is hard to verify.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- 04 questions ---------- -->
+  <section class="act" id="questions" aria-labelledby="q-h">
+    <div class="wrap">
+      <p class="act__label mono"><b>04</b> To confirm or disprove</p>
+      <div>
+        <h2 class="kicker reveal" id="q-h">Questions I'd ask.</h2>
+        <ol class="questions">
+          <li class="reveal"><p>What has been delivered so far, and how do the sprint-two change requests relate to it?</p><span class="mono">Team</span></li>
+          <li class="reveal"><p>Was there spillover from sprint one into sprint two?</p><span class="mono">Team</span></li>
+          <li class="reveal"><p>How was the scope change agreed, and was its impact on the schedule established?</p><span class="mono">Team + client</span></li>
+          <li class="reveal"><p>Which deadlines were missed, and how do they map to the original six-month plan?</p><span class="mono">Client</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- 05 recommendation ---------- -->
+  <section class="act" id="recommendation" aria-labelledby="rec-h">
+    <div class="wrap">
+      <p class="act__label mono"><b>05</b> What I'd do tomorrow</p>
+      <div>
+        <h2 class="kicker reveal" id="rec-h">Lightweight client checkpoints.</h2>
+        <ul class="dash dash--big reveal d1">
+          <li>Share each sprint's plan with the client up front.</li>
+          <li>Set goals together, two sprints ahead.</li>
+          <li>Invite the client to Sprint Reviews to see progress first-hand.</li>
+        </ul>
+        <div class="proscons reveal d2">
+          <div>
+            <p class="mono proscons__label">Problem it solves</p>
+            <ul class="dash">
+              <li>Both sides stay aligned on status and timelines.</li>
+              <li>Fewer mid-sprint scope changes, because the client has a proper channel for them.</li>
+              <li>The client feels progress because they see it.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="mono proscons__label proscons__label--muted">New risk it adds</p>
+            <ul class="dash dash--muted">
+              <li>A client who co-plans ahead may get over-involved or start micromanaging.</li>
+              <li>If they lack time, the fallback is an email with the plan and the outcome, plus one joint goal-setting session every two sprints.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- 06 the message ---------- -->
+  <section class="act" id="message" aria-labelledby="msg-h">
+    <div class="wrap">
+      <p class="act__label mono"><b>06</b> How I'd tell the client</p>
+      <div>
+        <h2 class="kicker reveal" id="msg-h">The message.</h2>
+        <blockquote class="email reveal d1">
+          <p>Hi [name],</p>
+          <p>Thanks for sharing your feedback on the pace of delivery. I'd like to walk you through what happened this past month. During sprint two the team was working with reduced availability, which coincided with the scope change you raised in that same sprint, so we couldn't fully fold the new requirements into that cycle. Based on our current assessment, the six-month timeline remains achievable.</p>
+          <p>Starting next sprint, we're introducing regular checkpoints: we'll share the sprint plan in advance, set goals together two sprints ahead, and invite you to our Sprint Reviews, so you'll see progress first-hand and have room to raise changes. Could we start this week?</p>
+          <p class="email__sign">Klaudia</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- takeaway ---------- -->
+  <section class="act act--dark cs-takeaway" aria-labelledby="take-h">
+    <div class="wrap">
+      <p class="act__label mono"><b>&rarr;</b> Takeaway</p>
+      <div>
+        <h2 class="kicker reveal" id="take-h">Turning complexity into clarity.</h2>
+        <p class="body-text reveal d1">Progress isn't only about hours logged. It's about making that progress visible, and <span class="mark mark--draw">giving the client a seat at the table</span> before problems surface.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="mono" style="color:var(--ink-2);margin:0 0 14px">Get in touch</p>
+    <a class="mail" href="mailto:k.rokitak@gmail.com">k.rokitak@gmail.com</a>
+    <div class="foot-row mono">
+      <a href="./">Home page</a>
+      <a href="https://www.linkedin.com/in/k-rokitak">LinkedIn</a>
+      <a href="files/klaudia-rokita-cv-en.pdf" target="_blank" rel="noopener">See my resume <span aria-hidden="true">&#8599;</span><span class="sr">(PDF, opens in a new tab)</span></a>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/reveal.js?v=3" defer></script>
+<script src="assets/js/vendor/rough-notation.iife.js" defer></script>
+<script src="assets/js/marks.js?v=3" defer></script>
+<script src="assets/js/nav.js?v=1" defer></script>
+</body>
+</html>
